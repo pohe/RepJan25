@@ -36,11 +36,16 @@ namespace RepJan25
             }
         }
 
+
         public override string ToString()
         {
             //return $"Subject {_subject} " + base.ToString();
             return $"Subject {_subject}  Basesalary {_baseSalary} ID {Id} Name {Name} Mobile {Mobile}";
         }
 
+        public override double CalculatePension()
+        {
+            return 0.1 * _baseSalary;
+        }
     }
 }

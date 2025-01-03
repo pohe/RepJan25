@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RepJan25
 {
-    public class Employee:Object
+    public abstract class Employee:Object
     {
 		protected int _baseSalary;
 
@@ -47,6 +47,8 @@ namespace RepJan25
 			return _baseSalary;
 		}
 
+
+		public abstract double CalculatePension();
 
         public override string ToString()
         {
