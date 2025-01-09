@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RepJan25
 {
-    public abstract class Employee:Object
+    public abstract class Employee
     {
 		protected int _baseSalary;
 

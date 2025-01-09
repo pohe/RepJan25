@@ -5,8 +5,8 @@ Console.WriteLine("Hello, World!");
 
 
 //Employee e1 = new Employee(20000, 1, "Peter", "121212");
-Console.WriteLine("Salary " + e1.CalculateSalary() );
-Console.WriteLine(e1.ToString() );
+//Console.WriteLine("Salary " + e1.CalculateSalary() );
+//Console.WriteLine(e1.ToString() );
 Teacher t1 = new Teacher("Systemudvikling", 20000, 2, "Kurt", "13131313");
 Console.WriteLine("Salary " + t1.CalculateSalary());
 Console.WriteLine(t1.ToString() );
@@ -37,3 +37,12 @@ foreach(Employee emp in employees)
     //Console.WriteLine(emp.ToString());
     Console.WriteLine($"Pension {emp.CalculatePension()}");
 }
+
+
+IEmployeeRepository empList = new EmployeeRepositoryList();
+
+empList.AddEmployee(t1);
+empList.AddEmployee(s1);
+empList.AddEmployee(ep);
+
+Console.WriteLine(empList.CalculateTotalSalarySum());
