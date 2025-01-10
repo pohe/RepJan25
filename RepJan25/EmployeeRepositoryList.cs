@@ -29,12 +29,28 @@ namespace RepJan25
 
         public double CalculateTotalSalarySum()
         {
-            double total =0;
-            foreach(Employee emp in _employees)
+            //double total =0;
+            //foreach(Employee emp in _employees)
+            //{
+            //    total += emp.CalculateSalary();
+            //}
+            //return total;
+            double total = 0;
+            for (int i = 0; i < _employees.Count; i++)
             {
-                total += emp.CalculateSalary();
+                total = total + _employees[i].CalculateSalary();
             }
+
+            //int i = 0;
+            //while (i < _employees.Count && total <100)
+            //{
+            //    total = total + _employees[i].CalculateSalary();
+            //    i++;
+            //}
+
+
             return total;
+
         }
 
         public List<Employee> GetAllEmployee()

@@ -46,3 +46,23 @@ empList.AddEmployee(s1);
 empList.AddEmployee(ep);
 
 Console.WriteLine(empList.CalculateTotalSalarySum());
+
+try
+{
+    //Employee empEx = new Teacher("programming",20000, 3, "Peter", "343434");
+
+    ep.BaseSalary = 30000;
+    Console.WriteLine("Her kommer vi ikke hvis der kastes en exception");
+}
+catch( ArgumentException aex)
+{
+    Console.WriteLine(aex.Message);
+}
+//catch( Exception nex)
+//{
+//    Console.WriteLine("Der skete en generel fejl");
+//}
+finally
+{
+    Console.WriteLine("Dette sker altid");
+}

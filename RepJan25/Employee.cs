@@ -13,7 +13,12 @@ namespace RepJan25
 		public int BaseSalary
 		{
 			get { return _baseSalary; }
-			set { _baseSalary = value; }
+			set {
+                if (value > 10000)
+                {
+                    throw new ArgumentException("Basesalary er for høj");
+                }
+                _baseSalary = value; }
 		}
 
 		private int _id;
@@ -36,6 +41,10 @@ namespace RepJan25
 
         public Employee(int baseSalary, int id, string name, string mobile)
         {
+			if (baseSalary >10000)
+			{
+				throw new ArgumentException("Basesalary er for høj");
+			}
 			_baseSalary = baseSalary;
 			_id = id;
 			_name = name;
